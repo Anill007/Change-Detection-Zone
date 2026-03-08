@@ -4,7 +4,7 @@ import { BaseComponent } from './base.component';
 @Component({
   selector: 'app-child-a',
   standalone: true,
-  template: `Child A {{cdTriggered()}} <br> Default CD strategy`,
+  template: `Child A {{cdTriggered()}} <br> Default CD strategy <br> This component will trigger CD after 5 seconds.`,
 //   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildA extends BaseComponent {
@@ -13,6 +13,6 @@ export class ChildA extends BaseComponent {
         super(zone, elRef);
         setTimeout(() => {
             // do something
-        }, 3000)
+        }, 5000)
     }
 }

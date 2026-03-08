@@ -8,10 +8,14 @@
     Red background: Template bindings checked too during chnage detection.
 </p>
 <button (click)="trigger()">
-    Trigger CD
+    CLICK event: triggers CD from parent
 </button>
+<p>Random Number: <span class="rand">{{randomNum}}</span></p>
+<p>Random Number is changed on blue button click</p>
 <div class="container">
     <app-child-a class="child"></app-child-a>
     <app-child-b class="child"></app-child-b>
     <app-child-c class="child" [randomNum]="randomNum"></app-child-c>
+    <app-child-d class="child" ></app-child-d>
+    <app-child-e class="child" ></app-child-e>
 </div>

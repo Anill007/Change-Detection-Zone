@@ -14,7 +14,7 @@ export abstract class BaseComponent implements OnInit, DoCheck {
     protected cdTriggered(): void {
         this.zone.runOutsideAngular(() => {
             this.elRef.nativeElement.style.backgroundColor = '#eb5490';
-            setTimeout(() => {this.elRef.nativeElement.style.backgroundColor = 'white';}, 1000)
+            setTimeout(() => {this.elRef.nativeElement.style.backgroundColor = 'white';}, 300)
         })
     }
 }
