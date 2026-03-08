@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChildA } from './child-a.component';
+import { ChildB } from './child-b.component';
+import { ChildC } from './child-c.component';
+import { BaseComponent } from './base.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [ChildA, ChildB, ChildC],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'Change-Detection-Zone';
+export class AppComponent extends BaseComponent {
+  protected randomNum = 0;
+  protected trigger(): void {
+    this.randomNum = Math.random();
+  }
 }
